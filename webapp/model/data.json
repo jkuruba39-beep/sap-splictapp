@@ -1,0 +1,390 @@
+{
+  "Orders": [
+    {
+      "OrderID": "1001",
+      "CustomerName": "TechWorld Inc.",
+      "Category": "Computer Peripherals",
+      "OrderedDate": "2025-10-01",
+      "ShippedDate": "2025-10-05",
+      "Status": "In time",
+      "Price": "1200 EUR",
+      "to": "detailPage_CP",
+      "ShippingAddress": {
+        "Name": "BlueDart",
+        "Street": "IT Park Road 14",
+        "City": "Bangalore",
+        "Country": "India"
+      },
+      "LineItems": [
+        { "Product": "Gaming Keyboard", "ProductID": "CP1001", "UnitPrice": "100 EUR", "Quantity": 5, "Total": "500 EUR" },
+        { "Product": "Optical Mouse", "ProductID": "CP1002", "UnitPrice": "70 EUR", "Quantity": 10, "Total": "700 EUR" }
+      ]
+    },
+    {
+      "OrderID": "1002",
+      "CustomerName": "Delta Computers",
+      "Category": "Computer Peripherals",
+      "OrderedDate": "2025-09-12",
+      "ShippedDate": "2025-09-15",
+      "Status": "Urgent",
+      "Price": "950 EUR",
+      "to": "detailPage_CP",
+      "ShippingAddress": {
+        "Name": "FedEx",
+        "Street": "Church Street 7",
+        "City": "Chennai",
+        "Country": "India"
+      },
+      "LineItems": [
+        { "Product": "Wireless Mouse", "ProductID": "CP1003", "UnitPrice": "50 EUR", "Quantity": 5, "Total": "250 EUR" },
+        { "Product": "Mechanical Keyboard", "ProductID": "CP1004", "UnitPrice": "140 EUR", "Quantity": 5, "Total": "700 EUR" }
+      ]
+    },
+    {
+      "OrderID": "1003",
+      "CustomerName": "NextGen IT",
+      "Category": "Computer Peripherals",
+      "OrderedDate": "2025-08-01",
+      "ShippedDate": "2025-08-06",
+      "Status": "Pending",
+      "Price": "1750 EUR",
+      "to": "detailPage_CP",
+      "ShippingAddress": {
+        "Name": "ShipEx",
+        "Street": "Tech Avenue 42",
+        "City": "Hyderabad",
+        "Country": "India"
+      },
+      "LineItems": [
+        { "Product": "24-inch Monitor", "ProductID": "CP1005", "UnitPrice": "250 EUR", "Quantity": 7, "Total": "1750 EUR" }
+      ]
+    },
+    {
+      "OrderID": "1004",
+      "CustomerName": "ABC Solutions",
+      "Category": "Computer Peripherals",
+      "OrderedDate": "2025-09-05",
+      "ShippedDate": "2025-09-09",
+      "Status": "In time",
+      "Price": "800 EUR",
+      "to": "detailPage_CP",
+      "ShippingAddress": {
+        "Name": "DHL",
+        "Street": "Gachibowli Main Road",
+        "City": "Hyderabad",
+        "Country": "India"
+      },
+      "LineItems": [
+        { "Product": "Webcam 1080p", "ProductID": "CP1006", "UnitPrice": "80 EUR", "Quantity": 10, "Total": "800 EUR" }
+      ]
+    },
+    {
+      "OrderID": "1005",
+      "CustomerName": "Macro Systems",
+      "Category": "Computer Peripherals",
+      "OrderedDate": "2025-09-28",
+      "ShippedDate": "2025-10-01",
+      "Status": "Urgent",
+      "Price": "1900 EUR",
+      "to": "detailPage_CP",
+      "ShippingAddress": {
+        "Name": "SpeedyShip",
+        "Street": "Cyber Towers",
+        "City": "Pune",
+        "Country": "India"
+      },
+      "LineItems": [
+        { "Product": "CPU Cabinet", "ProductID": "CP1007", "UnitPrice": "190 EUR", "Quantity": 10, "Total": "1900 EUR" }
+      ]
+    },
+    {
+      "OrderID": "1006",
+      "CustomerName": "DigitalX Pvt Ltd",
+      "Category": "Computer Peripherals",
+      "OrderedDate": "2025-10-12",
+      "ShippedDate": "2025-10-15",
+      "Status": "Pending",
+      "Price": "2200 EUR",
+      "to": "detailPage_CP",
+      "ShippingAddress": {
+        "Name": "DTDC",
+        "Street": "Ring Road",
+        "City": "Delhi",
+        "Country": "India"
+      },
+      "LineItems": [
+        { "Product": "UPS System", "ProductID": "CP1008", "UnitPrice": "550 EUR", "Quantity": 4, "Total": "2200 EUR" }
+      ]
+    },
+    {
+      "OrderID": "1007",
+      
+      "CustomerName": "TechStore",
+      "Category": "Computer Peripherals",
+      "OrderedDate": "2025-09-17",
+      "ShippedDate": "2025-09-22",
+      "Status": "In time",
+      "Price": "600 EUR",
+      "to": "detailPage_CP",
+      "ShippingAddress": {
+        "Name": "ShipPro",
+        "Street": "Station Road",
+        "City": "Ahmedabad",
+        "Country": "India"
+      },
+      "LineItems": [
+        { "Product": "Mouse Pad Combo", "ProductID": "CP1009", "UnitPrice": "60 EUR", "Quantity": 10, "Total": "600 EUR" }
+      ]
+    },
+
+    {
+      "OrderID": "2001",
+      "CustomerName": "Mobile Hub",
+      "Category": "Mobiles",
+      "OrderedDate": "2025-10-10",
+      "ShippedDate": "2025-10-13",
+      "Status": "In time",
+      "Price": "2300 EUR",
+      "to": "detailPage_MB",
+      "ShippingAddress": {
+        "Name": "DHL",
+        "Street": "High Street 2",
+        "City": "Mumbai",
+        "Country": "India"
+      },
+      "LineItems": [
+        { "Product": "iPhone 15", "ProductID": "MB1001", "UnitPrice": "1150 EUR", "Quantity": 2, "Total": "2300 EUR" }
+      ]
+    },
+    {
+      "OrderID": "2002",
+      "CustomerName": "GadgetZone",
+      "Category": "Mobiles",
+      "OrderedDate": "2025-09-10",
+      "ShippedDate": "2025-09-13",
+      "Status": "Urgent",
+      "Price": "2850 EUR",
+      "to": "detailPage_MB",
+      "ShippingAddress": {
+        "Name": "BlueDart",
+        "Street": "Central Mall",
+        "City": "Kolkata",
+        "Country": "India"
+      },
+      "LineItems": [
+        { "Product": "Samsung Galaxy S23", "ProductID": "MB1002", "UnitPrice": "950 EUR", "Quantity": 3, "Total": "2850 EUR" }
+      ]
+    },
+    {
+      "OrderID": "2003",
+     
+      "CustomerName": "Smartify Store",
+      "Category": "Mobiles",
+      "OrderedDate": "2025-10-04",
+      "ShippedDate": "2025-10-06",
+      "Status": "Pending",
+      "Price": "4000 EUR",
+      "to": "detailPage_MB",
+      "ShippingAddress": {
+        "Name": "FedEx",
+        "Street": "Airport Road",
+        "City": "Hyderabad",
+        "Country": "India"
+      },
+      "LineItems": [
+        { "Product": "OnePlus 13", "ProductID": "MB1003", "UnitPrice": "800 EUR", "Quantity": 5, "Total": "4000 EUR" }
+      ]
+    },
+    {
+      "OrderID": "2004",
+      "CustomerName": "PhoneMart",
+      "Category": "Mobiles",
+      "OrderedDate": "2025-09-01",
+      "ShippedDate": "2025-09-03",
+      "Status": "In time",
+      "Price": "1800 EUR",
+      "to": "detailPage_MB",
+      "ShippingAddress": {
+        "Name": "ShipNow",
+        "Street": "Tech Park 9",
+        "City": "Bangalore",
+        "Country": "India"
+      },
+      "LineItems": [
+        { "Product": "Redmi Note 13", "ProductID": "MB1004", "UnitPrice": "600 EUR", "Quantity": 3, "Total": "1800 EUR" }
+      ]
+    },
+    {
+      "OrderID": "2005",
+      "CustomerName": "QuickBuy Mobiles",
+      "Category": "Mobiles",
+      "OrderedDate": "2025-09-22",
+      "ShippedDate": "2025-09-26",
+      "Status": "Urgent",
+      "Price": "3000 EUR",
+      "to": "detailPage_MB",
+      "ShippingAddress": {
+        "Name": "ShipEx",
+        "Street": "South Street 44",
+        "City": "Chennai",
+        "Country": "India"
+      },
+      "LineItems": [
+        { "Product": "Google Pixel 9", "ProductID": "MB1005", "UnitPrice": "1000 EUR", "Quantity": 3, "Total": "3000 EUR" }
+      ]
+    },
+    {
+      "OrderID": "2006",
+      "CustomerName": "MobileRaja",
+      "Category": "Mobiles",
+      "OrderedDate": "2025-10-20",
+      "ShippedDate": "2025-10-23",
+      "Status": "Pending",
+      "Price": "4500 EUR",
+      "to": "detailPage_MB",
+      "ShippingAddress": {
+        "Name": "DTDC",
+        "Street": "Rajaji Road 11",
+        "City": "Madurai",
+        "Country": "India"
+      },
+      "LineItems": [
+        { "Product": "Nothing Phone 3", "ProductID": "MB1006", "UnitPrice": "900 EUR", "Quantity": 5, "Total": "4500 EUR" }
+      ]
+    },
+    {
+      "OrderID": "2007",
+      "CustomerName": "Elite Mobiles",
+      "Category": "Mobiles",
+      "OrderedDate": "2025-09-27",
+      "ShippedDate": "2025-09-30",
+      "Status": "In time",
+      "Price": "3200 EUR",
+      "to": "detailPage_MB",
+      "ShippingAddress": {
+        "Name": "BlueDart",
+        "Street": "Race Course Rd",
+        "City": "Coimbatore",
+        "Country": "India"
+      },
+      "LineItems": [
+        { "Product": "Realme GT 6 Pro", "ProductID": "MB1007", "UnitPrice": "800 EUR", "Quantity": 4, "Total": "3200 EUR" }
+      ]
+    },
+
+    {
+      "OrderID": "3001",
+      "CustomerName": "SoundWorld",
+      "Category": "Music Systems",
+      "OrderedDate": "2025-10-02",
+      "ShippedDate": "2025-10-04",
+      "Status": "In time",
+      "Price": "2400 EUR",
+      "to": "detailPage_MS",
+      "ShippingAddress": {
+        "Name": "ShipPro",
+        "Street": "Melody Lane",
+        "City": "Delhi",
+        "Country": "India"
+      },
+      "LineItems": [
+        { "Product": "Sony Home Theater", "ProductID": "MS1001", "UnitPrice": "600 EUR", "Quantity": 4, "Total": "2400 EUR" }
+      ]
+    },
+    {
+      "OrderID": "3002",
+      "CustomerName": "AudioTech",
+      "Category": "Music Systems",
+      "OrderedDate": "2025-09-09",
+      "ShippedDate": "2025-09-11",
+      "Status": "Urgent",
+      "Price": "1500 EUR",
+      "to": "detailPage_MS",
+      "ShippingAddress": {
+        "Name": "SpeedyShip",
+        "Street": "Beat Street 22",
+        "City": "Mumbai",
+        "Country": "India"
+      },
+      "LineItems": [
+        { "Product": "JBL Sound Bar", "ProductID": "MS1002", "UnitPrice": "300 EUR", "Quantity": 5, "Total": "1500 EUR" }
+      ]
+    },
+    {
+      "OrderID": "3003",
+      "CustomerName": "MusicZone",
+      "Category": "Music Systems",
+      "OrderedDate": "2025-08-25",
+      "ShippedDate": "2025-08-28",
+      "Status": "Pending",
+      "Price": "2000 EUR",
+      "to": "detailPage_MS",
+      "ShippingAddress": {
+        "Name": "DTDC",
+        "Street": "Harmony Road 3",
+        "City": "Kochi",
+        "Country": "India"
+      },
+      "LineItems": [
+        { "Product": "Bose Mini Speaker", "ProductID": "MS1003", "UnitPrice": "200 EUR", "Quantity": 10, "Total": "2000 EUR" }
+      ]
+    },
+    {
+      "OrderID": "3004",
+      "CustomerName": "AudioMart",
+      "Category": "Music Systems",
+      "OrderedDate": "2025-09-19",
+      "ShippedDate": "2025-09-22",
+      "Status": "In time",
+      "Price": "2800 EUR",
+      "to": "detailPage_MS",
+      "ShippingAddress": {
+        "Name": "FedEx",
+        "Street": "Rock Road 7",
+        "City": "Pune",
+        "Country": "India"
+      },
+      "LineItems": [
+        { "Product": "Marshall Acton III", "ProductID": "MS1004", "UnitPrice": "700 EUR", "Quantity": 4, "Total": "2800 EUR" }
+      ]
+    },
+    {
+      "OrderID": "3005",
+      "CustomerName": "Groove House",
+      "Category": "Music Systems",
+      "OrderedDate": "2025-10-08",
+      "ShippedDate": "2025-10-12",
+      "Status": "Urgent",
+      "Price": "3200 EUR",
+      "to": "detailPage_MS",
+      "ShippingAddress": {
+        "Name": "ShipEx",
+        "Street": "Drum Circle 10",
+        "City": "Bangalore",
+        "Country": "India"
+      },
+      "LineItems": [
+        { "Product": "LG Party Speaker", "ProductID": "MS1005", "UnitPrice": "800 EUR", "Quantity": 4, "Total": "3200 EUR" }
+      ]
+    },
+    {
+      "OrderID": "3006",
+      "CustomerName": "BeatBox Store",
+      "Category": "Music Systems",
+      "OrderedDate": "2025-09-30",
+      "ShippedDate": "2025-10-02",
+      "Status": "Pending",
+      "Price": "1800 EUR",
+      "to": "detailPage_MS",
+      "ShippingAddress": {
+        "Name": "ShipPro",
+        "Street": "Melody Nagar",
+        "City": "Hyderabad",
+        "Country": "India"
+      },
+      "LineItems": [
+        { "Product": "Sony Bluetooth Speaker", "ProductID": "MS1006", "UnitPrice": "600 EUR", "Quantity": 3, "Total": "1800 EUR" }
+      ]
+    }
+  ]
+}

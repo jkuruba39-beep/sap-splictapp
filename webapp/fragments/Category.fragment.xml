@@ -1,0 +1,9 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+    <SelectDialog
+        id="categoryValueHelpDialog"
+        title="Select Category"
+        liveChange=".onCategorySearch"
+        items="{valuehelpM>/results}">
+        <StandardListItem id="_IDGenStandardListItem2" title="{valuehelpM>Category}" />
+    </SelectDialog>
+</core:FragmentDefinition>

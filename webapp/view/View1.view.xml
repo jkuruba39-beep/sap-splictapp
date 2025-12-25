@@ -1,0 +1,269 @@
+<mvc:View
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    controllerName="splictapp.controller.View1">
+
+    <Page title="Orders">
+        <content>
+
+            <SplitApp id="splitApp" initialMaster="masterPage" initialDetail="detailPage">
+
+                <masterPages>
+                    <Page id="masterPage">
+
+                        <content>
+
+                            <Text text="Total Orders: {/ordersCount}" class="sapUiSmallMargin" />
+
+                            <Toolbar class="customToolbar">
+                                <SearchField id="searchField"
+                                    width="100%"
+                                    liveChange=".onSearch"
+                                    placeholder="Search by Order ID, Customer Name, or Category" />
+
+                                <Button icon="sap-icon://filter"
+                                 type="Negative"
+                                    press=".onOpenFilter"
+                                    tooltip="Filter Orders"
+                                    class="toolbarBtn"/>
+
+                                <Button icon="sap-icon://reset"
+                                    type="Emphasized"
+                                    press=".onClearFilter"
+                                    tooltip="Clear Filter"
+                                    class="toolbarBtn"/>
+                            </Toolbar>
+
+                            <List 
+                                id="orderList"
+                                mode="SingleSelectMaster"
+                                includeItemInSelection="true"
+                                items="{
+                                    path: '/Orders',
+                                    templateShareable: false
+                                }"
+                                selectionChange=".onOrderPress">
+
+                                <items>
+                                    <ObjectListItem
+                                        title="{CustomerName}"
+                                        intro="Category: {Category}"
+                                        number="{Price}"
+                                        numberUnit="EUR"
+                                         icon="{image}" 
+                                        type="Active">
+
+                                        <firstStatus>
+                                            <ObjectStatus
+                                                text="{Status}"
+                                                state="{= ${Status} === 'In time' ? 'Success'
+                                                         : ${Status} === 'Urgent' ? 'Error'
+                                                         : 'Warning'}"/>
+                                        </firstStatus>
+
+                                        <secondStatus>
+                                            <ObjectStatus text="Ordered: {OrderedDate} | Shipped: {ShippedDate}" />
+                                        </secondStatus>
+
+                                        <!-- FIXED: Image placed INSIDE the ObjectListItem -->
+                                     
+
+                                    </ObjectListItem>
+                                </items>
+                            </List>
+
+                        </content>
+
+                    </Page>
+                </masterPages>
+
+
+
+                <!-- ==================== DETAIL PAGES ==================== -->
+
+                <detailPages>
+
+                    <!-- PAGE 1 -->
+                    <Page id="detailPage1"  title="Computer Details" >
+
+                        <VBox class="sapUiMediumMargin">
+                     <Image
+            src="{detailModel>/image}"
+            width="200px"
+            height="200px"
+            densityAware="false"
+             press="onItemPress1" 
+            class="sapUiMediumMarginBottom" />
+
+                            <ObjectHeader
+                                title="Order ID: {detailModel>/OrderID}"
+                                intro="Customer: {detailModel>/CustomerName}"
+                                number="{detailModel>/Price}"
+                                numberUnit="EUR" 
+                                
+                                />
+
+                            <Title text="Shipping Address" level="H3"/>
+
+                            <VBox>
+                                <Text text="Name: {detailModel>/ShippingAddress/Name}" />
+                                <Text text="Street: {detailModel>/ShippingAddress/Street}" />
+                                <Text text="City: {detailModel>/ShippingAddress/City}" />
+                                <Text text="Country: {detailModel>/ShippingAddress/Country}" />
+                            </VBox>
+
+                            <Title text="Products" level="H3"/>
+
+                            <Table id="lineItemsTable" items="{detailModel>/LineItems}">
+                                <columns>
+                                    <Column><Text text="Product"/></Column>
+                                    <Column><Text text="Product ID"/></Column>
+                                    <Column><Text text="Unit Price"/></Column>
+                                    <Column><Text text="Qty"/></Column>
+                                    <Column><Text text="Total"/></Column>
+                                </columns>
+
+                                <items>
+                                    <ColumnListItem>
+                                        <cells>
+                                            <Text text="{detailModel>Product}"/>
+                                            <Text text="{detailModel>ProductID}"/>
+                                            <Text text="{detailModel>UnitPrice}"/>
+                                            <Text text="{detailModel>Quantity}"/>
+                                            <Text text="{detailModel>Total}"/>
+                                        </cells>
+                                    </ColumnListItem>
+                                </items>
+                            </Table>
+
+                        </VBox>
+
+                    </Page>
+
+
+
+                    <!-- PAGE 2 -->
+                    <Page id="detailPage2" title="Mobile Details">
+
+                        <VBox class="sapUiMediumMargin">
+                          <Image
+            src="{detailModel>/image}"
+            width="200px"
+            height="200px"
+            densityAware="false"
+             press="onItemPress1" 
+            class="sapUiMediumMarginBottom" />
+
+                            <ObjectHeader
+                                title="Order ID: {detailModel>/OrderID}"
+                                intro="Customer: {detailModel>/CustomerName}"
+                                number="{detailModel>/Price}"
+                                numberUnit="EUR" />
+
+                            <Title text="Shipping Address" level="H3"/>
+
+                            <VBox>
+                                <Text text="Name: {detailModel>/ShippingAddress/Name}" />
+                                <Text text="Street: {detailModel>/ShippingAddress/Street}" />
+                                <Text text="City: {detailModel>/ShippingAddress/City}" />
+                                <Text text="Country: {detailModel>/ShippingAddress/Country}" />
+                            </VBox>
+
+                            <Title text="Products" level="H3"/>
+
+                            <Table id="lineItemsTable2" items="{detailModel>/LineItems}">
+                                <columns>
+                                    <Column><Text text="Product"/></Column>
+                                    <Column><Text text="Product ID"/></Column>
+                                    <Column><Text text="Unit Price"/></Column>
+                                    <Column><Text text="Qty"/></Column>
+                                    <Column><Text text="Total"/></Column>
+                                </columns>
+
+                                <items>
+                                    <ColumnListItem>
+                                        <cells>
+                                            <Text text="{detailModel>Product}"/>
+                                            <Text text="{detailModel>ProductID}"/>
+                                            <Text text="{detailModel>UnitPrice}"/>
+                                            <Text text="{detailModel>Quantity}"/>
+                                            <!-- FIXED: sTotal → Total -->
+                                            <Text text="{detailModel>Total}"/>
+                                        </cells>
+                                    </ColumnListItem>
+                                </items>
+                            </Table>
+
+                        </VBox>
+
+                    </Page>
+
+
+
+                    <!-- PAGE 3 -->
+                    <Page id="detailPage3" title="Music System Details">
+
+                        <VBox class="sapUiMediumMargin">
+                         <Image
+            src="{detailModel>/image}"
+            width="200px"
+            height="200px"
+            densityAware="false"
+             press="onItemPress1" id="previewImage"
+            class="sapUiMediumMarginBottom" />
+
+                            <ObjectHeader
+                                title="Order ID: {detailModel>/OrderID}"
+                                intro="Customer: {detailModel>/CustomerName}"
+                                number="{detailModel>/Price}"
+                                numberUnit="EUR" />
+
+                            <Title text="Shipping Address" level="H3"/>
+
+                            <VBox>
+                                <Text text="Name: {detailModel>/ShippingAddress/Name}" />
+                                <Text text="Street: {detailModel>/ShippingAddress/Street}" />
+                                <Text text="City: {detailModel>/ShippingAddress/City}" />
+                                <Text text="Country: {detailModel>/ShippingAddress/Country}" />
+                            </VBox>
+
+                            <Title text="Products" level="H3"/>
+
+                            <Table id="lineItemsTable3" items="{detailModel>/LineItems}">
+                                <columns>
+                                    <Column><Text text="Product"/></Column>
+                                    <Column><Text text="Product ID"/></Column>
+                                    <Column><Text text="Unit Price"/></Column>
+                                    <Column><Text text="Qty"/></Column>
+                                    <Column><Text text="Total"/></Column>
+                                </columns>
+
+                                <items>
+                                    <ColumnListItem>
+                                        <cells>
+                                            <Text text="{detailModel>Product}"/>
+                                            <Text text="{detailModel>ProductID}"/>
+                                            <Text text="{detailModel>UnitPrice}"/>
+                                            <Text text="{detailModel>Quantity}"/>
+                                            <Text text="{detailModel>Total}"/>
+                                        </cells>
+                                    </ColumnListItem>
+                                </items>
+                            </Table>
+
+                        </VBox>
+
+                    </Page>
+
+                </detailPages>
+
+            </SplitApp>
+
+        </content>
+    </Page>
+
+</mvc:View>
+
+
+
+
